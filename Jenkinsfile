@@ -6,7 +6,7 @@ node {
     }
     
     stage('Publish to Docker Hub') {
-        docker.withRegistry("https://hub.docker.com/", "dockerhub") {
+        docker.withRegistry("https://index.docker.io/v1/", "dockerhub") {
             app.push('latest')
         }
     }
